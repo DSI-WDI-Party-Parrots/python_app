@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title> AirBnB-User-Commitment-Predictor </title>
+  </head>
+   <body>
+
+    <p> This page will take your inputs for user attributes that you are curious about. 
+      Once you submit your inputs, you will be directed to a page with likelihood of user commitment level (user who searches, user who messages, user who books). </p>
+
+      <form action = "http://localhost:5000/results" method = "POST">
+         <p># of Sessions <input type = "int" name = "no_session" /></p>
+         <p>Avg. Length of Sessions <input type = "int" name = "avg_session_len" /></p>
+         <p># of Searches <input type = "int" name = "like_exercise" /></p>
+         <p># of messages <input type ="int" name = "like_food" /></p>
+         <p># of bookings <input type ="int" name = "like_museum" /></p>
+
+
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+   </body>
+</html>
