@@ -27,8 +27,8 @@ ymessage = userdata.messagesentbinary
 ysearch = userdata.searchbinary
 
 requestmodel = requestmodel.fit(X,yrequest)
-messagemodel = messagemodel.fit(X,ymessage)
-searchmodel = searchmodel.fit(X,ysearch)
+# messagemodel = messagemodel.fit(X,ymessage)
+# searchmodel = searchmodel.fit(X,ysearch)
 
 
 # ______________________________
@@ -54,7 +54,7 @@ def predict():
     score_request = requestmodel.predict_proba(item)
     score_message = messagemodel.predict_proba(item)
     score_search = searchmodel.predict_proba(item)
-    results_request = {'chances_booking_request': score_request[0,1], 'no_request_chance': score_request[0,0]}
+    results_request = [{'chances_booking_request': score_request[0,1], 'no_request_chance': score_request[0,0]}]
     # results_message = {'chances of sending (at least 1) message': score_message[0,1], 'chances of no message': score_message[0,0]}
     # results_search = {'chances of doing (at least 1) search': score_search[0,1], 'chances of no search': score_search[0,0]}
 
