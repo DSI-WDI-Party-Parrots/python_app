@@ -120,8 +120,9 @@ def predict():
 if __name__ == '__main__':
     '''Connects to the server'''
 
-    HOST = '127.0.0.1'
-    PORT = '4000'
+    # HOST = '127.0.0.1'
+    # PORT = '4000'
 
-    app.run(HOST,PORT)
+    # app.run(HOST,PORT)
     # app.run(debug=True)
+    app.run()
