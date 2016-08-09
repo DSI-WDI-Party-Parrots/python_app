@@ -36,13 +36,6 @@ with open('pickled_model.pkl', 'r') as picklefile:
 # searchmodel = searchmodel.fit(X,ysearch)
 
 
-# ______________________________
-# '''INSTEAD of mumbo jumbo above, call in fitted model using pickle:
-# with open('my_pickled_sample.pkl', 'r') as picklefile:
-#     the_same_sample = pickle.load(picklefile)
-
-# set PREDICTOR = to picklefile'''
-
 # #-------- ROUTES GO HERE -----------#
 
 #localhost:4000/predict?SessionLength=7000&NumSessions=2
