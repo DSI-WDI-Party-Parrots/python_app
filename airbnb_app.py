@@ -8,25 +8,30 @@ def hello():
     return "Hello World!"
 
 #-------- MODEL GOES HERE -----------#
+import pickle
 
-import numpy as np
-import pandas as pd
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-# from sklearn.cross_validation import train_test_split, cross_val_score
-# from sklearn.metrics import roc_curve
-# from sklearn.neighbors import KNeighborsClassifier
+with open('pickled_model.pkl', 'r') as picklefile:
+    requestmodel = pickle.load(picklefile)
 
 
-userdata = pd.read_csv('user_airbnbdata.csv')
+# import numpy as np
+# import pandas as pd
+# from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+# from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
+# # from sklearn.cross_validation import train_test_split, cross_val_score
+# # from sklearn.metrics import roc_curve
+# # from sklearn.neighbors import KNeighborsClassifier
 
-requestmodel,searchmodel,messagemodel = LogisticRegressionCV(),LogisticRegressionCV(),LogisticRegressionCV()
-X = userdata[['SessionLength','NumSessions']]
-yrequest = userdata.requestsentbinary
-ymessage = userdata.messagesentbinary
-ysearch = userdata.searchbinary
 
-requestmodel = requestmodel.fit(X,yrequest)
+# userdata = pd.read_csv('user_airbnbdata.csv')
+
+# requestmodel,searchmodel,messagemodel = LogisticRegressionCV(),LogisticRegressionCV(),LogisticRegressionCV()
+# X = userdata[['SessionLength','NumSessions']]
+# yrequest = userdata.requestsentbinary
+# ymessage = userdata.messagesentbinary
+# ysearch = userdata.searchbinary
+
+# requestmodel = requestmodel.fit(X,yrequest)
 # messagemodel = messagemodel.fit(X,ymessage)
 # searchmodel = searchmodel.fit(X,ysearch)
 
