@@ -1,1 +1,1 @@
-web: gunicorn airbnb_app:app --log-file -
+web: python airbnb_app.py
