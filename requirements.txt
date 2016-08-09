@@ -1,5 +1,5 @@
-numpy==1.9.1
+numpy==1.9.0
 pandas==0.18.1
 Flask==0.11.1
-SciPy==0.9
+SciPy==0.13.3
 scikit_learn==0.17.1
