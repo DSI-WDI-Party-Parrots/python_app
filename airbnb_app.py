@@ -8,10 +8,10 @@ def hello():
     return "Hello World!"
 
 #-------- MODEL GOES HERE -----------#
-# import pickle
+import pickle
 
-# with open('pickled_model.pkl', 'r') as picklefile:
-#     requestmodel = pickle.load(picklefile)
+with open('pickled_model.pkl', 'r') as picklefile:
+    requestmodel = pickle.load(picklefile)
 
 
 # import numpy as np
