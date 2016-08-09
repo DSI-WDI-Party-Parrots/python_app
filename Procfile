@@ -1,1 +1,1 @@
-web: python airbnb_app.py
+web: gunicorn airbnb_app:app
