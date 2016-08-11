@@ -9,18 +9,20 @@ def hello():
 
 #-------- MODEL GOES HERE -----------#
 import pickle
+import numpy as np
+import scipy as sp
+import pandas as pd
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
 
 with open('pickled_model.pkl', 'r') as picklefile:
     requestmodel = pickle.load(picklefile)
 
 
-# import numpy as np
-# import pandas as pd
-# from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-# from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-# # from sklearn.cross_validation import train_test_split, cross_val_score
-# # from sklearn.metrics import roc_curve
-# # from sklearn.neighbors import KNeighborsClassifier
+
+# from sklearn.cross_validation import train_test_split, cross_val_score
+# from sklearn.metrics import roc_curve
+# from sklearn.neighbors import KNeighborsClassifier
 
 
 # userdata = pd.read_csv('user_airbnbdata.csv')
