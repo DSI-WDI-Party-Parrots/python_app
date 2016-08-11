@@ -126,9 +126,9 @@ if __name__ == '__main__':
     # PORT = '4000'
 
     # app.run(HOST,PORT)
-    # app.run(debug=True)
+    app.run()
 
     # For Heroku
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    # import os
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(host='0.0.0.0', port=port)
